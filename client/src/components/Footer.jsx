@@ -1,17 +1,31 @@
-function Link({ uri, text }) {
-  return <a href={uri} target="_blank" rel="noreferrer">{text}</a>;
-}
+import React from "react";
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import '../Css/FooterStyle.css';
 
-function Footer() {
-  return (
+const Footer=()=>{
+    return(
+        <>
     <footer>
-      <h2>More resources</h2>
-      <Link uri={"https://trufflesuite.com"} text={"Truffle"} />
-      <Link uri={"https://reactjs.org"} text={"React"} />
-      <Link uri={"https://soliditylang.org"} text={"Solidity"} />
-      <Link uri={"https://ethereum.org"} text={"Ethereum"} />
-    </footer >
-  );
-}
+        <div className="container container-flex">
+            <div className="icons">
+                <TwitterIcon className="icon"/>
+                <FacebookIcon className="icon"/>
+                <YouTubeIcon className="icon"/>
+            </div>
+            <div className="line">
+                <hr></hr>
+                <hr></hr>
+            </div>
+            <div className="copyright">
+                <p> Disclaimer</p>
+                <p> Terms of Use </p>
 
+            </div>
+        </div>
+        </footer>
+        </>
+    )
+}
 export default Footer;
